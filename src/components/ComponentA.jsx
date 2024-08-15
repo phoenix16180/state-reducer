@@ -1,7 +1,7 @@
 import ComponentB from './ComponentB';
 import { INITIAL_STATE, loginReducer } from '../loginReducer';
-
 import { createContext, useReducer } from 'react'
+
 export const LoginContext = createContext();
 
 function ComponentA() {

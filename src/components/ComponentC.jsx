@@ -1,9 +1,9 @@
 import ComponentD from './ComponentD';
 import { LoginContext } from './ComponentA';
-import { useContext } from 'react'
+import { useContext } from 'react';
 
-function ComponentC() {
-    const { state, dispatch } = useContext(LoginContext)
+const ComponentC = () => {
+    const { state, dispatch } = useContext(LoginContext);
 
     return (
         <fieldset>
@@ -13,7 +13,7 @@ function ComponentC() {
             <button onClick={() => dispatch({ type: 'logout' })} >Sign Out</button>
             <ComponentD/>
         </fieldset>
-    )
-}
+    );
+};
 
-export default ComponentC
+export default ComponentC;

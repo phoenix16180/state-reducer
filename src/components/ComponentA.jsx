@@ -1,10 +1,10 @@
 import ComponentB from './ComponentB';
 import { INITIAL_STATE, loginReducer } from '../loginReducer';
-import { createContext, useReducer } from 'react'
+import { createContext, useReducer } from 'react';
 
 export const LoginContext = createContext();
 
-function ComponentA() {
+const ComponentA = () => {
     const [state, dispatch] = useReducer(loginReducer, INITIAL_STATE);
 
     return (
@@ -17,7 +17,7 @@ function ComponentA() {
                 <ComponentB />
             </LoginContext.Provider>
         </fieldset>
-    )
-}
+    );
+};
 
-export default ComponentA
+export default ComponentA;
